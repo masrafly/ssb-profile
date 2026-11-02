@@ -147,6 +147,36 @@ export const achievements = [
   "Peserta tetap Liga Usia Dini Kota sejak 2017",
 ];
 
+export const stats = [
+  { value: 10, suffix: "+", label: "Tahun Berdiri" },
+  { value: 500, suffix: "+", label: "Alumni & Siswa Aktif" },
+  { value: 15, suffix: "", label: "Trofi & Penghargaan" },
+  { value: 12, suffix: "", label: "Pelatih Bersertifikat" },
+];
+
+export const features = [
+  {
+    icon: "ShieldCheck",
+    title: "Pelatih Bersertifikat",
+    desc: "Seluruh pelatih memiliki lisensi kepelatihan resmi (AFC/PSSI) dan pengalaman menangani usia dini.",
+  },
+  {
+    icon: "Target",
+    title: "Kurikulum Berjenjang",
+    desc: "Program latihan disusun bertahap sesuai kelompok usia, dari dasar hingga tingkat kompetitif.",
+  },
+  {
+    icon: "HeartHandshake",
+    title: "Fokus Pembentukan Karakter",
+    desc: "Bukan hanya teknik, kami menekankan disiplin, sportivitas, dan kerja sama tim pada setiap siswa.",
+  },
+  {
+    icon: "Trophy",
+    title: "Jam Terbang Kompetisi",
+    desc: "Siswa rutin diikutkan turnamen & pertandingan persahabatan antar SSB untuk mengasah mental juara.",
+  },
+];
+
 export const galleryImages = [
   { src: "/images/gallery-placeholder-1.jpg", alt: "Sesi latihan teknik dasar" },
   { src: "/images/gallery-placeholder-2.jpg", alt: "Pertandingan persahabatan" },
