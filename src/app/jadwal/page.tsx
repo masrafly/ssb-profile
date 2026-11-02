@@ -1,4 +1,7 @@
+import { MapPin } from "lucide-react";
 import { programs, siteConfig } from "@/data/site";
+import { Card, SectionHeading } from "@/components/ui/Card";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 export const metadata = {
   title: `Jadwal & Lokasi — ${siteConfig.name}`,
@@ -6,47 +9,56 @@ export const metadata = {
 
 export default function JadwalPage() {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-16">
-      <h1 className="text-3xl font-extrabold text-[#1E7D32]">Jadwal Latihan & Lokasi</h1>
+    <div>
+      <section className="relative bg-brand-green-dark text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-grass-pattern" />
+        <div className="relative max-w-4xl mx-auto px-4 text-center">
+          <h1 className="font-display text-4xl font-extrabold">Jadwal Latihan & Lokasi</h1>
+        </div>
+      </section>
 
-      <section className="mt-8">
-        <h2 className="text-xl font-bold">Jadwal Latihan</h2>
-        <div className="mt-4 overflow-x-auto">
-          <table className="w-full text-sm border border-black/10">
-            <thead className="bg-[#1E7D32] text-white">
-              <tr>
-                <th className="p-3 text-left">Kelompok</th>
-                <th className="p-3 text-left">Hari</th>
-                <th className="p-3 text-left">Jam</th>
-              </tr>
-            </thead>
-            <tbody>
-              {programs.map((p) => (
-                <tr key={p.slug} className="border-t border-black/10">
-                  <td className="p-3 font-semibold">{p.name}</td>
-                  <td className="p-3">{p.schedule.split(",")[0]}</td>
-                  <td className="p-3">{p.schedule.split(",")[1]?.trim()}</td>
+      <div className="max-w-5xl mx-auto px-4 py-16">
+        <FadeIn>
+          <SectionHeading eyebrow="Rutin Setiap Minggu" title="Jadwal Latihan" align="left" />
+          <Card className="mt-8 overflow-hidden">
+            <table className="w-full text-sm">
+              <thead className="bg-brand-green text-white">
+                <tr>
+                  <th className="p-4 text-left font-display">Kelompok</th>
+                  <th className="p-4 text-left font-display">Hari</th>
+                  <th className="p-4 text-left font-display">Jam</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
+              </thead>
+              <tbody>
+                {programs.map((p, i) => (
+                  <tr key={p.slug} className={i % 2 === 0 ? "bg-white" : "bg-black/[0.02]"}>
+                    <td className="p-4 font-semibold text-brand-green-dark">{p.name}</td>
+                    <td className="p-4 text-black/70">{p.schedule.split(",")[0]}</td>
+                    <td className="p-4 text-black/70">{p.schedule.split(",")[1]?.trim()}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </Card>
+        </FadeIn>
 
-      <section className="mt-10">
-        <h2 className="text-xl font-bold">Lokasi</h2>
-        <p className="mt-2 text-black/70 text-sm">{siteConfig.address}</p>
-        <div className="mt-4 aspect-video rounded-xl overflow-hidden border border-black/10">
-          <iframe
-            src={siteConfig.mapsEmbedUrl}
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            loading="lazy"
-            title="Lokasi SSB"
-          />
-        </div>
-      </section>
+        <FadeIn delay={0.1}>
+          <SectionHeading eyebrow="Alamat Lengkap" title="Lokasi Latihan" align="left" className="mt-14" />
+          <p className="mt-4 text-black/70 text-sm flex items-center gap-2">
+            <MapPin size={16} className="text-brand-green" /> {siteConfig.address}
+          </p>
+          <div className="mt-6 aspect-video rounded-2xl overflow-hidden border border-black/10 shadow-sm">
+            <iframe
+              src={siteConfig.mapsEmbedUrl}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              title="Lokasi SSB"
+            />
+          </div>
+        </FadeIn>
+      </div>
     </div>
   );
 }
