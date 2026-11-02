@@ -45,14 +45,16 @@ export function SectionHeading({
   title,
   description,
   align = "center",
+  className,
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   align?: "center" | "left";
+  className?: string;
 }) {
   return (
-    <div className={cn("max-w-2xl", align === "center" ? "mx-auto text-center" : "text-left")}>
+    <div className={cn("max-w-2xl", align === "center" ? "mx-auto text-center" : "text-left", className)}>
       {eyebrow && (
         <p className="text-sm font-bold uppercase tracking-widest text-brand-green">{eyebrow}</p>
       )}

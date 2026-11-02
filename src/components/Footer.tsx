@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, Mail, MapPin, Phone, ShieldCheck, Youtube } from "lucide-react";
+import { Camera, Mail, MapPin, Phone, PlayCircle, ShieldCheck } from "lucide-react";
 import { navLinks, siteConfig } from "@/data/site";
 
 export default function Footer() {
@@ -23,7 +23,7 @@ export default function Footer() {
               aria-label="Instagram"
               className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-green-dark transition-colors"
             >
-              <Instagram size={16} />
+              <Camera size={16} />
             </a>
             <a
               href={siteConfig.youtube}
@@ -32,7 +32,7 @@ export default function Footer() {
               aria-label="YouTube"
               className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-green-dark transition-colors"
             >
-              <Youtube size={16} />
+              <PlayCircle size={16} />
             </a>
           </div>
         </div>

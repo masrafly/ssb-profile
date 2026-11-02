@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, Instagram, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Camera, CheckCircle2, Mail, MapPin, Phone, Send } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
@@ -52,7 +52,7 @@ export default function KontakPage() {
             </li>
             <li className="flex gap-3 items-center">
               <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-green/10 text-brand-green">
-                <Instagram size={16} />
+                <Camera size={16} />
               </span>
               <a href={siteConfig.instagram} target="_blank" rel="noreferrer" className="text-brand-green font-semibold hover:underline">
                 Instagram
