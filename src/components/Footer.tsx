@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Camera, Mail, MapPin, Phone, PlayCircle, ShieldCheck } from "lucide-react";
 import { navLinks, siteConfig } from "@/data/site";
+import { CurrentYear } from "@/components/ui/CurrentYear";
 
 export default function Footer() {
   return (
@@ -69,7 +70,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="relative border-t border-white/10 py-5 text-center text-xs text-white/40">
-        © {new Date().getFullYear()} {siteConfig.name}. Semua hak cipta dilindungi. (Data pada website ini masih placeholder)
+        © <CurrentYear /> {siteConfig.name}. Semua hak cipta dilindungi. (Data pada website ini masih placeholder)
       </div>
     </footer>
   );

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, ShieldCheck, X } from "lucide-react";
 import { navLinks, siteConfig } from "@/data/site";
 import { ButtonLink } from "@/components/ui/Button";
@@ -12,7 +12,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const prevPathname = useRef(pathname);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -21,13 +20,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close the mobile menu when navigating to a new route. Adjusting state
-  // during render (per React docs) instead of in an effect avoids an extra
-  // cascading render.
-  if (prevPathname.current !== pathname) {
-    prevPathname.current = pathname;
-    if (open) setOpen(false);
-  }
+  const closeMenu = () => setOpen(false);
 
   return (
     <header
@@ -88,6 +81,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
+              onClick={closeMenu}
               className={cn(
                 "rounded-lg px-3 py-2.5 hover:bg-brand-green/5",
                 pathname === link.href && "text-brand-green bg-brand-green/5"
@@ -96,7 +90,7 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <ButtonLink href="/pendaftaran" className="mt-2 w-full">
+          <ButtonLink href="/pendaftaran" onClick={closeMenu} className="mt-2 w-full">
             Daftar Sekarang
           </ButtonLink>
         </nav>
