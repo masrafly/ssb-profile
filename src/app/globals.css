@@ -5,12 +5,12 @@
    mengganti ratusan className di seluruh halaman — hanya nilai HEX-nya yang
    diubah jadi grayscale. */
 @theme {
-  --color-brand-green: #262626; /* abu gelap — aksen teks/ikon di atas bg terang */
-  --color-brand-green-dark: #0a0a0a; /* hampir hitam — bg gelap & heading utama */
+  --color-brand-green: #1a1a1a; /* hitam — aksen teks/ikon di atas bg terang */
+  --color-brand-green-dark: #000000; /* hitam murni — bg gelap, heading & logo utama */
   --color-brand-green-light: #525252; /* abu medium — cadangan, jarang dipakai */
   --color-brand-gold: #ffffff; /* putih — aksen di atas bg gelap (footer, stat angka) */
   --color-brand-lime: #d4d4d4; /* abu terang — cadangan */
-  --color-brand-ink: #111111; /* hampir hitam — teks label/body gelap */
+  --color-brand-ink: #000000; /* hitam murni — teks label/body */
 
   --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -18,7 +18,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #111111;
+  --foreground: #000000;
 }
 
 html {

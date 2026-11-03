@@ -2,8 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  // cacheComponents & partialPrefetching (fitur eksperimental Next.js 16)
+  // dinonaktifkan — sebelumnya memicu error prerender ("unstable value")
+  // dan kemungkinan juga menyebabkan mismatch hydration client/server.
+  // Situs ini statis & sederhana, tidak perlu fitur eksperimental tersebut.
   images: {
     remotePatterns: [
       {

@@ -36,7 +36,7 @@ export default function Navbar() {
           href="/"
           className="flex shrink-0 items-center gap-2.5 font-display font-extrabold text-base sm:text-lg text-brand-green-dark"
         >
-          <span className="inline-flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-green to-brand-green-dark text-white shadow-md shadow-brand-green/30">
+          <span className="inline-flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-black text-white shadow-md shadow-black/30">
             <ShieldCheck size={20} strokeWidth={2.4} />
           </span>
           <span className="truncate">{siteConfig.name}</span>

@@ -23,7 +23,7 @@ export default function PelatihPage() {
           {coaches.map((c, i) => (
             <FadeIn key={c.name} delay={i * 0.05}>
               <Card className="p-6 text-center h-full">
-                <div className="mx-auto h-20 w-20 rounded-full bg-gradient-to-br from-brand-green to-brand-green-dark flex items-center justify-center text-white shadow-md shadow-brand-green/30">
+                <div className="mx-auto h-20 w-20 rounded-full bg-black flex items-center justify-center text-white shadow-md shadow-black/30">
                   <UserRound size={32} />
                 </div>
                 <h2 className="mt-4 font-display font-bold text-brand-green-dark">{c.name}</h2>
