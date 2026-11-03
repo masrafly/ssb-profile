@@ -33,11 +33,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-grid-pattern opacity-10" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center w-full">
-          <FadeIn>
+          {/* <FadeIn>
             <Badge variant="outline" className="mb-5 sm:mb-6">
               <Sparkles size={14} /> Sejak {siteConfig.foundedYear} membentuk pemain muda
             </Badge>
-          </FadeIn>
+          </FadeIn> */}
           <FadeIn delay={0.08}>
             <h1 className="font-display text-balance text-3xl font-extrabold leading-[1.15] sm:text-5xl md:text-6xl">
               {siteConfig.tagline}
