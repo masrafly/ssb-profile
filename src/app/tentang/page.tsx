@@ -48,7 +48,7 @@ export default function TentangPage() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <Card className="p-6 sm:p-7 h-full">
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-gold/15 text-brand-gold">
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-black/10 text-brand-green-dark">
                 <ShieldCheck size={20} />
               </span>
               <h2 className="mt-4 font-display text-xl font-bold text-brand-green-dark">Misi</h2>

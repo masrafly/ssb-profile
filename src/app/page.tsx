@@ -140,7 +140,7 @@ export default function Home() {
           {achievements.map((a, i) => (
             <FadeIn key={a} delay={i * 0.05}>
               <div className="flex gap-4 rounded-2xl bg-white border border-black/5 p-5 shadow-sm">
-                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold">
+                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black/10 text-brand-green-dark">
                   <Trophy size={18} />
                 </span>
                 <span className="text-sm text-black/70 leading-relaxed self-center">{a}</span>

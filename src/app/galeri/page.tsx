@@ -25,7 +25,7 @@ export default function GaleriPage() {
         <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3">
           {galleryImages.map((img, i) => (
             <FadeIn key={img.src} delay={i * 0.04}>
-              <div className="group aspect-square rounded-2xl bg-gradient-to-br from-brand-green/10 to-brand-gold/10 border border-black/5 flex flex-col items-center justify-center gap-2 sm:gap-3 text-center text-xs sm:text-sm text-black/50 p-3 sm:p-4 hover:shadow-lg transition-shadow">
+              <div className="group aspect-square rounded-2xl bg-black/5 border border-black/5 flex flex-col items-center justify-center gap-2 sm:gap-3 text-center text-xs sm:text-sm text-black/50 p-3 sm:p-4 hover:shadow-lg transition-shadow">
                 <ImageIcon size={24} className="text-brand-green/50 group-hover:scale-110 transition-transform sm:size-7" />
                 {img.alt}
               </div>

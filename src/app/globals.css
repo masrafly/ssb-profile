@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
+/* Palet monokrom hitam/putih (profesional, tanpa warna hijau/emas).
+   Nama token (brand-green, brand-gold, dst) dipertahankan agar tidak perlu
+   mengganti ratusan className di seluruh halaman — hanya nilai HEX-nya yang
+   diubah jadi grayscale. */
 @theme {
-  --color-brand-green: #0f5d30;
-  --color-brand-green-dark: #0a3d20;
-  --color-brand-green-light: #1e8f4e;
-  --color-brand-gold: #ffc72c;
-  --color-brand-lime: #8bc53f;
-  --color-brand-ink: #0b1f14;
+  --color-brand-green: #262626; /* abu gelap — aksen teks/ikon di atas bg terang */
+  --color-brand-green-dark: #0a0a0a; /* hampir hitam — bg gelap & heading utama */
+  --color-brand-green-light: #525252; /* abu medium — cadangan, jarang dipakai */
+  --color-brand-gold: #ffffff; /* putih — aksen di atas bg gelap (footer, stat angka) */
+  --color-brand-lime: #d4d4d4; /* abu terang — cadangan */
+  --color-brand-ink: #111111; /* hampir hitam — teks label/body gelap */
 
   --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -14,7 +18,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0b1f14;
+  --foreground: #111111;
 }
 
 html {
@@ -28,15 +32,15 @@ body {
 }
 
 ::selection {
-  background: var(--color-brand-gold);
-  color: var(--color-brand-green-dark);
+  background: var(--color-brand-green-dark);
+  color: #ffffff;
 }
 
-/* Subtle accent glow for hero / CTA sections */
+/* Subtle accent glow for hero / CTA sections (grayscale) */
 .bg-grass-pattern {
   background-image:
-    radial-gradient(circle at 15% 20%, rgba(255, 199, 44, 0.14) 0%, transparent 45%),
-    radial-gradient(circle at 85% 80%, rgba(139, 197, 63, 0.16) 0%, transparent 45%);
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(255, 255, 255, 0.06) 0%, transparent 45%);
 }
 
 .bg-grid-pattern {

@@ -59,7 +59,7 @@ export default function Navbar() {
               >
                 {link.label}
                 {active && (
-                  <span className="absolute -bottom-1.5 left-0 right-0 h-0.5 rounded-full bg-brand-gold" />
+                  <span className="absolute -bottom-1.5 left-0 right-0 h-0.5 rounded-full bg-black" />
                 )}
               </Link>
             );

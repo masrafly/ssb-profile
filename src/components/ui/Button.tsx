@@ -10,16 +10,18 @@ type BaseProps = {
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/70 disabled:opacity-50 disabled:pointer-events-none";
+  "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/40 disabled:opacity-50 disabled:pointer-events-none";
 
 const variants: Record<NonNullable<BaseProps["variant"]>, string> = {
+  // bg-putih + border hitam agar tetap jelas baik di atas bg gelap (hero foto)
+  // maupun bg terang (navbar/form) — saat hover terbalik jadi solid hitam.
   primary:
-    "bg-brand-gold text-brand-green-dark shadow-lg shadow-brand-gold/30 hover:shadow-xl hover:shadow-brand-gold/40 hover:-translate-y-0.5 active:translate-y-0",
+    "bg-white text-black border-2 border-black shadow-lg shadow-black/10 hover:bg-black hover:text-white hover:shadow-xl hover:shadow-black/30 hover:-translate-y-0.5 active:translate-y-0",
   secondary:
-    "bg-brand-green text-white shadow-lg shadow-brand-green/30 hover:bg-brand-green-dark hover:-translate-y-0.5 active:translate-y-0",
+    "bg-brand-green text-white shadow-lg shadow-black/20 hover:bg-brand-green-dark hover:-translate-y-0.5 active:translate-y-0",
   outline:
     "border-2 border-white/40 text-white hover:bg-white/10 backdrop-blur-sm",
-  ghost: "text-brand-green hover:bg-brand-green/10",
+  ghost: "text-brand-green hover:bg-black/5",
 };
 
 const sizes: Record<NonNullable<BaseProps["size"]>, string> = {

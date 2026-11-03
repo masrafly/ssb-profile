@@ -24,7 +24,7 @@ export default function PrestasiPage() {
           <div className="mt-8 grid gap-4 grid-cols-1 sm:grid-cols-2">
             {achievements.map((a) => (
               <div key={a} className="flex gap-3 rounded-2xl border border-black/5 bg-white p-5 text-sm shadow-sm">
-                <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold">
+                <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-black/10 text-brand-green-dark">
                   <Trophy size={16} />
                 </span>
                 <span className="self-center text-black/70">{a}</span>

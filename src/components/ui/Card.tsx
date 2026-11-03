@@ -4,7 +4,7 @@ export function Card({ className, children }: { className?: string; children: Re
   return (
     <div
       className={cn(
-        "rounded-2xl border border-black/5 bg-white shadow-[0_2px_20px_-4px_rgba(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0_12px_32px_-8px_rgba(15,93,48,0.25)] hover:-translate-y-1",
+        "rounded-2xl border border-black/5 bg-white shadow-[0_2px_20px_-4px_rgba(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.2)] hover:-translate-y-1",
         className
       )}
     >
@@ -23,7 +23,7 @@ export function Badge({
   variant?: "gold" | "green" | "outline";
 }) {
   const variants = {
-    gold: "bg-brand-gold/15 text-brand-green-dark border border-brand-gold/40",
+    gold: "bg-black/10 text-brand-green-dark border border-black/20",
     green: "bg-brand-green/10 text-brand-green border border-brand-green/30",
     outline: "bg-white/10 text-white border border-white/30",
   };
