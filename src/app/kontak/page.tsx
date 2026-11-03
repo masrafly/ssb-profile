@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { Camera, CheckCircle2, Mail, MapPin, Phone, Send } from "lucide-react";
-import { siteConfig } from "@/data/site";
+import { heroImages, siteConfig } from "@/data/site";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { PageHero } from "@/components/ui/PageHero";
 
 const inputClass =
   "w-full rounded-xl border border-black/10 bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-brand-green focus:ring-2 focus:ring-brand-green/20";
@@ -22,14 +23,9 @@ export default function KontakPage() {
 
   return (
     <div>
-      <section className="relative bg-brand-green-dark text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-grass-pattern" />
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <h1 className="font-display text-4xl font-extrabold">Kontak Kami</h1>
-        </div>
-      </section>
+      <PageHero image={heroImages.kontak} imageAlt="Lapangan SSB" title="Kontak Kami" size="sm" />
 
-      <div className="max-w-5xl mx-auto px-4 py-16 grid gap-10 md:grid-cols-2">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-14 sm:py-16 grid gap-10 grid-cols-1 md:grid-cols-2">
         <FadeIn>
           <ul className="space-y-4 text-sm text-black/70">
             <li className="flex gap-3 items-start">
@@ -48,7 +44,7 @@ export default function KontakPage() {
               <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-green/10 text-brand-green">
                 <Mail size={16} />
               </span>
-              {siteConfig.email}
+              <span className="break-all">{siteConfig.email}</span>
             </li>
             <li className="flex gap-3 items-center">
               <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-green/10 text-brand-green">
@@ -82,7 +78,7 @@ export default function KontakPage() {
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="rounded-2xl border border-black/5 bg-white p-7 shadow-sm space-y-5">
+            <form onSubmit={handleSubmit} className="rounded-2xl border border-black/5 bg-white p-5 sm:p-7 shadow-sm space-y-5">
               <div>
                 <label className="block text-sm font-semibold mb-1.5 text-brand-ink/80">Nama</label>
                 <input

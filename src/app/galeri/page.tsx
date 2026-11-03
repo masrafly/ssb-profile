@@ -1,6 +1,7 @@
 import { ImageIcon } from "lucide-react";
-import { galleryImages, siteConfig } from "@/data/site";
+import { galleryImages, heroImages, siteConfig } from "@/data/site";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { PageHero } from "@/components/ui/PageHero";
 
 export const metadata = {
   title: `Galeri — ${siteConfig.name}`,
@@ -9,26 +10,23 @@ export const metadata = {
 export default function GaleriPage() {
   return (
     <div>
-      <section className="relative bg-brand-green-dark text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-grass-pattern" />
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <h1 className="font-display text-4xl font-extrabold">Galeri Kegiatan</h1>
-          <p className="mt-3 text-white/70">
-            Dokumentasi latihan, pertandingan, dan momen kebersamaan {siteConfig.name}.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        image={heroImages.galeri}
+        imageAlt="Momen kebersamaan tim SSB"
+        title="Galeri Kegiatan"
+        description={`Dokumentasi latihan, pertandingan, dan momen kebersamaan ${siteConfig.name}.`}
+      />
 
-      <div className="max-w-6xl mx-auto px-4 py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-16">
         <p className="text-xs text-black/40 mb-6 text-center">
           (Gambar di bawah masih placeholder — ganti dengan foto asli di folder <code>public/images</code>, lalu
           pakai <code>next/image</code> untuk performa optimal.)
         </p>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3">
           {galleryImages.map((img, i) => (
             <FadeIn key={img.src} delay={i * 0.04}>
-              <div className="group aspect-square rounded-2xl bg-gradient-to-br from-brand-green/10 to-brand-gold/10 border border-black/5 flex flex-col items-center justify-center gap-3 text-center text-sm text-black/50 p-4 hover:shadow-lg transition-shadow">
-                <ImageIcon size={28} className="text-brand-green/50 group-hover:scale-110 transition-transform" />
+              <div className="group aspect-square rounded-2xl bg-gradient-to-br from-brand-green/10 to-brand-gold/10 border border-black/5 flex flex-col items-center justify-center gap-2 sm:gap-3 text-center text-xs sm:text-sm text-black/50 p-3 sm:p-4 hover:shadow-lg transition-shadow">
+                <ImageIcon size={24} className="text-brand-green/50 group-hover:scale-110 transition-transform sm:size-7" />
                 {img.alt}
               </div>
             </FadeIn>

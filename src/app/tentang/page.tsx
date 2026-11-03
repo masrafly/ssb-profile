@@ -1,7 +1,8 @@
 import { CalendarDays, FileCheck2, ShieldCheck, Target } from "lucide-react";
-import { siteConfig } from "@/data/site";
+import { heroImages, siteConfig } from "@/data/site";
 import { Badge, Card, SectionHeading } from "@/components/ui/Card";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { PageHero } from "@/components/ui/PageHero";
 
 export const metadata = {
   title: `Tentang Kami — ${siteConfig.name}`,
@@ -10,20 +11,21 @@ export const metadata = {
 export default function TentangPage() {
   return (
     <div>
-      <section className="relative bg-brand-green-dark text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-grass-pattern" />
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
+      <PageHero
+        image={heroImages.tentang}
+        imageAlt="Lapangan sepak bola tempat SSB berlatih"
+        title={`Tentang ${siteConfig.name}`}
+        eyebrow={
           <Badge variant="outline" className="mb-4">
             <CalendarDays size={14} /> Berdiri sejak {siteConfig.foundedYear}
           </Badge>
-          <h1 className="font-display text-4xl font-extrabold">Tentang {siteConfig.name}</h1>
-        </div>
-      </section>
+        }
+      />
 
-      <div className="max-w-4xl mx-auto px-4 py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-14 sm:py-16">
         <FadeIn>
           <SectionHeading eyebrow="Sejarah Kami" title="Perjalanan Kami" align="left" />
-          <p className="mt-4 text-black/70 leading-relaxed">
+          <p className="mt-4 text-black/70 leading-relaxed text-sm sm:text-base">
             {siteConfig.name} didirikan pada tahun {siteConfig.foundedYear} dengan tujuan memberikan
             wadah pembinaan sepak bola usia dini yang terstruktur, aman, dan menyenangkan di
             lingkungan sekitar. Berawal dari satu kelompok latihan kecil, kini SSB telah berkembang
@@ -31,9 +33,9 @@ export default function TentangPage() {
           </p>
         </FadeIn>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+        <div className="mt-10 grid gap-6 grid-cols-1 sm:grid-cols-2">
           <FadeIn delay={0.05}>
-            <Card className="p-7 h-full">
+            <Card className="p-6 sm:p-7 h-full">
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-green/10 text-brand-green">
                 <Target size={20} />
               </span>
@@ -45,7 +47,7 @@ export default function TentangPage() {
             </Card>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <Card className="p-7 h-full">
+            <Card className="p-6 sm:p-7 h-full">
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-gold/15 text-brand-gold">
                 <ShieldCheck size={20} />
               </span>
@@ -61,7 +63,7 @@ export default function TentangPage() {
         </div>
 
         <FadeIn delay={0.15}>
-          <Card className="mt-10 p-7 flex gap-4">
+          <Card className="mt-10 p-6 sm:p-7 flex flex-col sm:flex-row gap-4">
             <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-green/10 text-brand-green">
               <FileCheck2 size={20} />
             </span>

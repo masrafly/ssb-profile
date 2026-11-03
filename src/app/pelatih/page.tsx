@@ -1,7 +1,8 @@
 import { Award, UserRound } from "lucide-react";
-import { coaches, siteConfig } from "@/data/site";
+import { coaches, heroImages, siteConfig } from "@/data/site";
 import { Card } from "@/components/ui/Card";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { PageHero } from "@/components/ui/PageHero";
 
 export const metadata = {
   title: `Pelatih & Staff — ${siteConfig.name}`,
@@ -10,19 +11,15 @@ export const metadata = {
 export default function PelatihPage() {
   return (
     <div>
-      <section className="relative bg-brand-green-dark text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-grass-pattern" />
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <h1 className="font-display text-4xl font-extrabold">Pelatih & Staff</h1>
-          <p className="mt-3 text-white/70">
-            Tim pelatih {siteConfig.name} terdiri dari pelatih berlisensi dengan pengalaman menangani
-            pemain usia dini.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        image={heroImages.pelatih}
+        imageAlt="Pelatih mendampingi anak-anak bermain sepak bola"
+        title="Pelatih & Staff"
+        description={`Tim pelatih ${siteConfig.name} terdiri dari pelatih berlisensi dengan pengalaman menangani pemain usia dini.`}
+      />
 
-      <div className="max-w-6xl mx-auto px-4 py-16">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-16">
+        <div className="grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {coaches.map((c, i) => (
             <FadeIn key={c.name} delay={i * 0.05}>
               <Card className="p-6 text-center h-full">

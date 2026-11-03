@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import { CheckCircle2, Send, Users } from "lucide-react";
-import { programs, siteConfig } from "@/data/site";
+import { heroImages, programs, siteConfig } from "@/data/site";
 import { Badge } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { PageHero } from "@/components/ui/PageHero";
 
 const inputClass =
   "w-full rounded-xl border border-black/10 bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-brand-green focus:ring-2 focus:ring-brand-green/20";
@@ -33,21 +34,20 @@ export default function PendaftaranPage() {
 
   return (
     <div>
-      <section className="relative bg-brand-green-dark text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-grass-pattern" />
-        <div className="relative max-w-2xl mx-auto px-4 text-center">
+      <PageHero
+        image={heroImages.pendaftaran}
+        imageAlt="Anak-anak bersemangat berlatih sepak bola"
+        title="Form Pendaftaran"
+        description={`Isi data berikut, data akan dikirim ke admin ${siteConfig.name} via WhatsApp untuk dikonfirmasi.`}
+        size="sm"
+        eyebrow={
           <Badge variant="outline" className="mb-4">
             <Users size={14} /> Pendaftaran Dibuka
           </Badge>
-          <h1 className="font-display text-4xl font-extrabold">Form Pendaftaran</h1>
-          <p className="mt-3 text-white/70">
-            Isi data berikut, data akan dikirim ke admin {siteConfig.name} via WhatsApp untuk
-            dikonfirmasi.
-          </p>
-        </div>
-      </section>
+        }
+      />
 
-      <div className="max-w-xl mx-auto px-4 py-16">
+      <div className="max-w-xl mx-auto px-4 sm:px-6 py-14 sm:py-16">
         <FadeIn>
           {submitted ? (
             <div className="rounded-2xl border border-brand-green/30 bg-brand-green/5 p-8 text-center">
@@ -58,7 +58,7 @@ export default function PendaftaranPage() {
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="rounded-2xl border border-black/5 bg-white p-7 shadow-sm space-y-5">
+            <form onSubmit={handleSubmit} className="rounded-2xl border border-black/5 bg-white p-5 sm:p-7 shadow-sm space-y-5">
               <div>
                 <label className="block text-sm font-semibold mb-1.5 text-brand-ink/80">Nama Calon Siswa</label>
                 <input

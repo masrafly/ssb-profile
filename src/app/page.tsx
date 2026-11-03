@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   HeartHandshake,
@@ -7,7 +8,7 @@ import {
   Target,
   Trophy,
 } from "lucide-react";
-import { achievements, features, programs, siteConfig, stats, testimonials } from "@/data/site";
+import { achievements, features, heroImages, programs, siteConfig, stats, testimonials } from "@/data/site";
 import { ButtonLink } from "@/components/ui/Button";
 import { Badge, Card, SectionHeading } from "@/components/ui/Card";
 import { StatCounter } from "@/components/ui/StatCounter";
@@ -18,29 +19,37 @@ const iconMap = { ShieldCheck, Target, HeartHandshake, Trophy };
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
-      {/* Hero */}
-      <section className="relative bg-brand-green-dark text-white">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-green via-brand-green-dark to-brand-ink" />
-        <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="absolute inset-0 bg-grass-pattern" />
-        <div className="relative max-w-6xl mx-auto px-4 py-24 sm:py-32 text-center">
+      {/* Hero — foto aksi pemain SSB sebagai background */}
+      <section className="relative min-h-[560px] sm:min-h-[640px] lg:min-h-[720px] flex items-center text-white">
+        <Image
+          src={heroImages.home}
+          alt="Pemain muda SSB berlatih sepak bola"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-ink/90 via-brand-green-dark/75 to-brand-ink/95" />
+        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center w-full">
           <FadeIn>
-            <Badge variant="outline" className="mb-6">
+            <Badge variant="outline" className="mb-5 sm:mb-6">
               <Sparkles size={14} /> Sejak {siteConfig.foundedYear} membentuk pemain muda
             </Badge>
           </FadeIn>
           <FadeIn delay={0.08}>
-            <h1 className="font-display text-balance text-4xl font-extrabold leading-[1.1] sm:text-6xl">
+            <h1 className="font-display text-balance text-3xl font-extrabold leading-[1.15] sm:text-5xl md:text-6xl">
               {siteConfig.tagline}
             </h1>
           </FadeIn>
           <FadeIn delay={0.16}>
-            <p className="mt-6 max-w-2xl mx-auto text-white/70 text-lg leading-relaxed">
+            <p className="mt-5 sm:mt-6 max-w-2xl mx-auto text-white/80 text-base sm:text-lg leading-relaxed">
               {siteConfig.description}
             </p>
           </FadeIn>
           <FadeIn delay={0.24}>
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <div className="mt-8 sm:mt-10 flex flex-wrap justify-center gap-3 sm:gap-4">
               <ButtonLink href="/pendaftaran" size="lg">
                 Daftar Sekarang <ArrowRight size={18} />
               </ButtonLink>
@@ -52,8 +61,8 @@ export default function Home() {
         </div>
 
         {/* Stats strip */}
-        <div className="relative border-t border-white/10 bg-black/10">
-          <div className="max-w-6xl mx-auto grid grid-cols-2 gap-6 px-4 py-10 sm:grid-cols-4">
+        <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/10 bg-black/30 backdrop-blur-sm">
+          <div className="max-w-6xl mx-auto grid grid-cols-2 gap-4 sm:gap-6 px-4 sm:px-6 py-6 sm:py-10 md:grid-cols-4">
             {stats.map((s) => (
               <StatCounter key={s.label} value={s.value} suffix={s.suffix} label={s.label} />
             ))}
@@ -62,13 +71,13 @@ export default function Home() {
       </section>
 
       {/* Why us */}
-      <section className="max-w-6xl mx-auto px-4 py-20">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
         <SectionHeading
           eyebrow="Kenapa Pilih Kami"
           title="Dibangun untuk Perkembangan Pemain Muda"
           description="Kombinasi kurikulum terstruktur, pelatih berlisensi, dan budaya kompetitif yang sehat."
         />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 sm:mt-12 grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f, i) => {
             const Icon = iconMap[f.icon as keyof typeof iconMap];
             return (
@@ -87,14 +96,14 @@ export default function Home() {
       </section>
 
       {/* Highlight Program */}
-      <section className="bg-black/[0.02] py-20">
-        <div className="max-w-6xl mx-auto px-4">
+      <section className="bg-black/[0.02] py-16 sm:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <SectionHeading
             eyebrow="Program Latihan"
             title="Kurikulum Sesuai Kelompok Usia"
             description="Setiap kelompok usia memiliki fokus latihan dan jadwal yang disesuaikan tahap tumbuh kembang."
           />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 sm:mt-12 grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {programs.map((p, i) => (
               <FadeIn key={p.slug} delay={i * 0.05}>
                 <Card className="p-6 flex flex-col h-full">
@@ -125,9 +134,9 @@ export default function Home() {
       </section>
 
       {/* Prestasi */}
-      <section className="max-w-6xl mx-auto px-4 py-20">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
         <SectionHeading eyebrow="Rekam Jejak" title="Prestasi Kami" />
-        <div className="mt-12 grid gap-4 sm:grid-cols-2">
+        <div className="mt-10 sm:mt-12 grid gap-4 grid-cols-1 sm:grid-cols-2">
           {achievements.map((a, i) => (
             <FadeIn key={a} delay={i * 0.05}>
               <div className="flex gap-4 rounded-2xl bg-white border border-black/5 p-5 shadow-sm">
@@ -142,10 +151,10 @@ export default function Home() {
       </section>
 
       {/* Testimoni */}
-      <section className="bg-black/[0.02] py-20">
-        <div className="max-w-6xl mx-auto px-4">
+      <section className="bg-black/[0.02] py-16 sm:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <SectionHeading eyebrow="Testimoni" title="Apa Kata Mereka" />
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 sm:mt-12 grid gap-5 sm:gap-6 grid-cols-1 md:grid-cols-3">
             {testimonials.map((t, i) => (
               <FadeIn key={t.name} delay={i * 0.06}>
                 <Card className="p-6 h-full flex flex-col">
@@ -159,13 +168,22 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="relative bg-brand-green-dark text-white text-center py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-grass-pattern" />
-        <div className="relative max-w-2xl mx-auto px-4">
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-balance">
+      <section className="relative text-white text-center py-16 sm:py-20 overflow-hidden">
+        <Image
+          src={heroImages.pendaftaran}
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-brand-green-dark/90" />
+        <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6">
+          <h2 className="font-display text-2xl sm:text-4xl font-extrabold text-balance">
             Siap Bergabung Bersama {siteConfig.name}?
           </h2>
-          <p className="mt-3 text-white/70">Pendaftaran siswa baru dibuka sepanjang tahun untuk semua kelompok usia.</p>
+          <p className="mt-3 text-white/80 text-sm sm:text-base">
+            Pendaftaran siswa baru dibuka sepanjang tahun untuk semua kelompok usia.
+          </p>
           <div className="mt-8">
             <ButtonLink href="/pendaftaran" size="lg">
               Daftar Sekarang <ArrowRight size={18} />
