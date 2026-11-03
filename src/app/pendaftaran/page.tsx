@@ -26,7 +26,7 @@ export default function PendaftaranPage() {
     // TODO: hubungkan ke API Route / Google Sheet / email service.
     // Untuk sekarang, redirect ke WhatsApp admin dengan data terisi otomatis.
     const text = encodeURIComponent(
-      `Pendaftaran SSB:\nNama Calon Siswa: ${form.nama}\nUsia: ${form.usia}\nKelompok: ${form.kelompok}\nNama Orang Tua: ${form.namaOrtu}\nKontak: ${form.whatsapp}`
+      `Pendaftaran ${siteConfig.name}:\nNama Calon Siswa: ${form.nama}\nUsia: ${form.usia}\nKelompok: ${form.kelompok}\nNama Orang Tua: ${form.namaOrtu}\nKontak: ${form.whatsapp}`
     );
     window.open(`https://wa.me/${siteConfig.whatsapp}?text=${text}`, "_blank");
     setSubmitted(true);
@@ -36,7 +36,7 @@ export default function PendaftaranPage() {
     <div>
       <PageHero
         image={heroImages.pendaftaran}
-        imageAlt="Anak-anak bersemangat berlatih sepak bola"
+        imageAlt="Anak-anak bersemangat berlatih futsal"
         title="Form Pendaftaran"
         description={`Isi data berikut, data akan dikirim ke admin ${siteConfig.name} via WhatsApp untuk dikonfirmasi.`}
         size="sm"

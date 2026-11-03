@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Menu, ShieldCheck, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { navLinks, siteConfig } from "@/data/site";
 import { ButtonLink } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
@@ -36,8 +36,8 @@ export default function Navbar() {
           href="/"
           className="flex shrink-0 items-center gap-2.5 font-display font-extrabold text-base sm:text-lg text-brand-green-dark"
         >
-          <span className="inline-flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-black text-white shadow-md shadow-black/30">
-            <ShieldCheck size={20} strokeWidth={2.4} />
+          <span className="inline-flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-black text-white shadow-md shadow-black/30 font-display text-xs sm:text-sm font-extrabold tracking-tight">
+            MF
           </span>
           <span className="truncate">{siteConfig.name}</span>
         </Link>

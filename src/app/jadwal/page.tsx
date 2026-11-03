@@ -13,7 +13,7 @@ export default function JadwalPage() {
     <div>
       <PageHero
         image={heroImages.jadwal}
-        imageAlt="Lapangan sepak bola tempat latihan SSB"
+        imageAlt="Lapangan futsal tempat latihan MF Academy"
         title="Jadwal Latihan & Lokasi"
         size="sm"
       />
@@ -57,7 +57,7 @@ export default function JadwalPage() {
               height="100%"
               style={{ border: 0 }}
               loading="lazy"
-              title="Lokasi SSB"
+              title="Lokasi MF Academy"
             />
           </div>
         </FadeIn>

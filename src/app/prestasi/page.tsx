@@ -13,7 +13,7 @@ export default function PrestasiPage() {
     <div>
       <PageHero
         image={heroImages.prestasi}
-        imageAlt="Pemain merayakan kemenangan di lapangan"
+        imageAlt="Pemain merayakan momen di lapangan futsal"
         title="Prestasi & Berita"
         size="sm"
       />

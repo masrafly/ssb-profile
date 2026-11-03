@@ -3,7 +3,7 @@ import { siteConfig } from "@/data/site";
 
 export default function WhatsAppButton() {
   const message = encodeURIComponent(
-    `Halo ${siteConfig.name}, saya ingin bertanya tentang pendaftaran SSB.`
+    `Halo ${siteConfig.name}, saya ingin bertanya tentang pendaftaran futsal.`
   );
   const link = `https://wa.me/${siteConfig.whatsapp}?text=${message}`;
 

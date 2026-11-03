@@ -19,11 +19,11 @@ const iconMap = { ShieldCheck, Target, HeartHandshake, Trophy };
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
-      {/* Hero — foto aksi pemain SSB sebagai background */}
+      {/* Hero — foto aksi futsal sebagai background */}
       <section className="relative min-h-[560px] sm:min-h-[640px] lg:min-h-[720px] flex items-center text-white">
         <Image
           src={heroImages.home}
-          alt="Pemain muda SSB berlatih sepak bola"
+          alt="Pemain MF Academy berlatih futsal"
           fill
           priority
           sizes="100vw"
@@ -33,11 +33,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-grid-pattern opacity-10" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center w-full">
-          {/* <FadeIn>
+          <FadeIn>
             <Badge variant="outline" className="mb-5 sm:mb-6">
-              <Sparkles size={14} /> Sejak {siteConfig.foundedYear} membentuk pemain muda
+              <Sparkles size={14} /> {siteConfig.category} • {siteConfig.ageRangeLabel} • {siteConfig.hashtag}
             </Badge>
-          </FadeIn> */}
+          </FadeIn>
           <FadeIn delay={0.08}>
             <h1 className="font-display text-balance text-3xl font-extrabold leading-[1.15] sm:text-5xl md:text-6xl">
               {siteConfig.tagline}

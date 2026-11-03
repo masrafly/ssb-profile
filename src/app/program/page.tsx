@@ -14,7 +14,7 @@ export default function ProgramPage() {
     <div>
       <PageHero
         image={heroImages.program}
-        imageAlt="Pemain muda berlatih menendang bola"
+        imageAlt="Pemain muda berlatih futsal di lapangan indoor"
         title="Program Latihan"
         description={`Kurikulum ${siteConfig.name} dibagi berdasarkan kelompok usia agar setiap siswa mendapat porsi latihan teknik, fisik, dan taktik yang sesuai.`}
       />

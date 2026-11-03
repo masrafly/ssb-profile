@@ -13,11 +13,11 @@ export default function TentangPage() {
     <div>
       <PageHero
         image={heroImages.tentang}
-        imageAlt="Lapangan sepak bola tempat SSB berlatih"
+        imageAlt="Lapangan futsal tempat MF Academy berlatih"
         title={`Tentang ${siteConfig.name}`}
         eyebrow={
           <Badge variant="outline" className="mb-4">
-            <CalendarDays size={14} /> Berdiri sejak {siteConfig.foundedYear}
+            <CalendarDays size={14} /> {siteConfig.category} • {siteConfig.ageRangeLabel}
           </Badge>
         }
       />
@@ -26,10 +26,11 @@ export default function TentangPage() {
         <FadeIn>
           <SectionHeading eyebrow="Sejarah Kami" title="Perjalanan Kami" align="left" />
           <p className="mt-4 text-black/70 leading-relaxed text-sm sm:text-base">
-            {siteConfig.name} didirikan pada tahun {siteConfig.foundedYear} dengan tujuan memberikan
-            wadah pembinaan sepak bola usia dini yang terstruktur, aman, dan menyenangkan di
-            lingkungan sekitar. Berawal dari satu kelompok latihan kecil, kini SSB telah berkembang
-            menjadi akademi dengan beberapa kelompok usia dan ratusan alumni.
+            {siteConfig.name} ({siteConfig.fullName}) hadir dengan tujuan memberikan wadah pembinaan
+            futsal usia dini yang terstruktur, aman, dan menyenangkan — khusus untuk putra kategori
+            {" "}{siteConfig.ageRangeLabel.toLowerCase()}. Latihan rutin berlangsung di {siteConfig.venue}
+            {" "}setiap {siteConfig.trainingDaysLabel}, dengan semangat {siteConfig.hashtag} sebagai fondasi
+            setiap sesi.
           </p>
         </FadeIn>
 
@@ -41,8 +42,8 @@ export default function TentangPage() {
               </span>
               <h2 className="mt-4 font-display text-xl font-bold text-brand-green-dark">Visi</h2>
               <p className="mt-2 text-black/60 text-sm leading-relaxed">
-                Menjadi akademi sepak bola usia dini terpercaya yang mencetak pemain berkarakter,
-                berprestasi, dan berdaya saing.
+                Menjadi akademi futsal usia dini terpercaya yang mencetak pemain berkarakter,
+                berprestasi, dan berdaya saing, dengan jiwa {siteConfig.hashtag}.
               </p>
             </Card>
           </FadeIn>
@@ -70,8 +71,8 @@ export default function TentangPage() {
             <div>
               <h2 className="font-display text-xl font-bold text-brand-green-dark">Legalitas & Izin</h2>
               <p className="mt-2 text-black/60 text-sm leading-relaxed">
-                SSB terdaftar secara resmi di bawah [Nama Asosiasi/Pengcab PSSI — placeholder] dengan
-                nomor registrasi [XXX-XXXX — placeholder]. Dokumen legalitas dapat diminta melalui
+                MF Academy terdaftar secara resmi di bawah [Nama Asosiasi/Federasi Futsal — placeholder]
+                dengan nomor registrasi [XXX-XXXX — placeholder]. Dokumen legalitas dapat diminta melalui
                 halaman Kontak.
               </p>
             </div>

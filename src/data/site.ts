@@ -1,19 +1,31 @@
-// ⚠️ DATA PLACEHOLDER — ganti semua nilai di bawah dengan data asli SSB sebelum go-live.
+// Data MF Academy — sebagian REAL (diambil dari bio Instagram @mf.futsal.academy:
+// kategori usia, hari latihan, venue, nama liga), sebagian masih PLACEHOLDER
+// (alamat lengkap, kontak, harga, nama pelatih, prestasi spesifik — belum ada
+// konfirmasi publik, jangan diklaim sebagai fakta sebelum dikonfirmasi admin).
+//
+// ⚠️ LOGO: belum ada file logo asli (Instagram memblokir pengambilan foto
+// profil otomatis tanpa login). Navbar & Footer sementara pakai monogram teks
+// "MF" — ganti ke <Image> begitu file logo asli (PNG/SVG, idealnya transparan)
+// tersedia di folder public/.
 
 export const siteConfig = {
-  name: "SSB Garuda Muda",
-  tagline: "Membentuk Karakter & Prestasi Sepak Bola Sejak Usia Dini",
+  name: "MF Academy",
+  fullName: "MF Futsal Academy",
+  tagline: "Ready For Fight, Ready For The Game",
   description:
-    "Sekolah Sepak Bola (SSB) Garuda Muda adalah akademi sepak bola usia dini yang fokus pada pengembangan teknik, fisik, dan karakter pemain.",
-  address: "Jl. Lapangan Hijau No. 10, Kecamatan Contoh, Kota Contoh, 12345",
-  whatsapp: "6281234567890",
-  phone: "(021) 1234-5678",
-  email: "info@ssbgarudamuda.example.com",
-  instagram: "https://instagram.com/ssbgarudamuda",
-  youtube: "https://youtube.com/@ssbgarudamuda",
+    "MF Academy adalah akademi futsal khusus putra untuk kategori usia 10–17 tahun. Kami membentuk mental juara lewat latihan rutin dan jam terbang kompetisi liga futsal — #FightingSpirit.",
+  category: "Khusus Putra", // dari bio IG
+  ageRangeLabel: "Usia 10–17 Tahun", // dari bio IG
+  venue: "GOR Mega Regency", // dari bio IG
+  trainingDaysLabel: "Selasa, Kamis & Minggu", // dari bio IG
+  hashtag: "#FightingSpirit",
+  address: "GOR Mega Regency — [lengkapi alamat lengkap sebelum go-live]",
+  whatsapp: "6281234567890", // placeholder — pendaftaran asli via DM Instagram
+  phone: "(021) 1234-5678", // placeholder
+  email: "info@mfacademy.example.com", // placeholder
+  instagram: "https://www.instagram.com/mf.futsal.academy", // REAL
   mapsEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126935.5!2d106.8!3d-6.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMDAuMCJTIDEwNsKwNDgnMDAuMCJF!5e0!3m2!1sid!2sid!4v1600000000000",
-  foundedYear: 2015,
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126935.5!2d106.8!3d-6.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMDAuMCJTIDEwNsKwNDgnMDAuMCJF!5e0!3m2!1sid!2sid!4v1600000000000", // placeholder, ganti sesuai lokasi GOR Mega Regency asli
 };
 
 export const navLinks = [
@@ -27,61 +39,54 @@ export const navLinks = [
   { href: "/kontak", label: "Kontak" },
 ];
 
-// Foto aksi sepak bola (Unsplash, lisensi bebas pakai) untuk background hero
-// tiap halaman. Ganti dengan foto asli kegiatan SSB bila sudah tersedia.
+// Foto aksi futsal indoor (Unsplash, lisensi bebas pakai) untuk background hero
+// tiap halaman. Ganti dengan foto asli kegiatan MF Academy bila sudah tersedia.
 export const heroImages = {
-  home: "https://images.unsplash.com/photo-1604651683969-48adb1d8a570",
-  tentang: "https://images.unsplash.com/photo-1522778119026-d647f0596c20",
-  program: "https://images.unsplash.com/photo-1604935281463-a7ad4f808f32",
-  pelatih: "https://images.unsplash.com/photo-1526232761682-d26e03ac148e",
-  jadwal: "https://images.unsplash.com/photo-1522778119026-d647f0596c20",
-  galeri: "https://images.unsplash.com/photo-1604651683969-48adb1d8a570",
-  prestasi: "https://images.unsplash.com/photo-1604935281463-a7ad4f808f32",
-  pendaftaran: "https://images.unsplash.com/photo-1526232761682-d26e03ac148e",
-  kontak: "https://images.unsplash.com/photo-1522778119026-d647f0596c20",
+  home: "https://images.unsplash.com/photo-1763775594018-4a84eeadd83d",
+  tentang: "https://images.unsplash.com/photo-1774798154084-c2b861d8581d",
+  program: "https://images.unsplash.com/photo-1763775468707-573c7cd6b0da",
+  pelatih: "https://images.unsplash.com/photo-1606925797300-0b35e9d1794e",
+  jadwal: "https://images.unsplash.com/photo-1774798154084-c2b861d8581d",
+  galeri: "https://images.unsplash.com/photo-1763775594018-4a84eeadd83d",
+  prestasi: "https://images.unsplash.com/photo-1763775468707-573c7cd6b0da",
+  pendaftaran: "https://images.unsplash.com/photo-1606925797300-0b35e9d1794e",
+  kontak: "https://images.unsplash.com/photo-1774798154084-c2b861d8581d",
 };
 
-
+// Kelompok usia & jadwal — bagian usia/hari/venue REAL dari bio Instagram;
+// fokus latihan & harga masih contoh, sesuaikan dengan kurikulum asli.
 export const programs = [
   {
-    slug: "u8",
-    name: "Kelompok Usia U-8",
-    ageRange: "6 - 8 tahun",
-    focus: "Pengenalan dasar bola, koordinasi gerak, kesenangan bermain",
-    schedule: "Selasa & Kamis, 15.30 - 17.00",
-    price: "Rp 150.000 / bulan",
+    slug: "u11",
+    name: "Kelompok Usia U-11",
+    ageRange: "10 - 11 tahun (Putra)",
+    focus: "Pengenalan teknik dasar futsal: ball control, passing & dribbling jarak pendek dalam ruang sempit",
+    schedule: "Selasa, Kamis & Minggu, 16.00 - 17.30",
+    price: "Hubungi Admin (DM Instagram)",
   },
   {
-    slug: "u10",
-    name: "Kelompok Usia U-10",
-    ageRange: "9 - 10 tahun",
-    focus: "Teknik dasar individu (passing, dribbling, shooting)",
-    schedule: "Selasa & Kamis, 15.30 - 17.00",
-    price: "Rp 175.000 / bulan",
-  },
-  {
-    slug: "u12",
-    name: "Kelompok Usia U-12",
-    ageRange: "11 - 12 tahun",
-    focus: "Taktik dasar tim, small-sided games, fisik dasar",
-    schedule: "Senin, Rabu & Jumat, 16.00 - 17.30",
-    price: "Rp 200.000 / bulan",
+    slug: "u13",
+    name: "Kelompok Usia U-13",
+    ageRange: "12 - 13 tahun (Putra)",
+    focus: "Teknik individu lanjutan, first touch, dan dasar taktik 5 vs 5",
+    schedule: "Selasa, Kamis & Minggu, 16.00 - 17.30",
+    price: "Hubungi Admin (DM Instagram)",
   },
   {
     slug: "u15",
     name: "Kelompok Usia U-15",
-    ageRange: "13 - 15 tahun",
-    focus: "Taktik tim lanjutan, posisi bermain, kompetisi antar SSB",
-    schedule: "Senin, Rabu & Jumat, 16.00 - 18.00",
-    price: "Rp 225.000 / bulan",
+    ageRange: "14 - 15 tahun (Putra)",
+    focus: "Taktik tim, transisi serang-bertahan cepat, serta fisik & stamina khas futsal",
+    schedule: "Selasa, Kamis & Minggu, 17.30 - 19.00",
+    price: "Hubungi Admin (DM Instagram)",
   },
   {
     slug: "u17",
     name: "Kelompok Usia U-17",
-    ageRange: "16 - 17 tahun",
-    focus: "Persiapan jenjang kompetitif/akademi profesional",
-    schedule: "Senin - Jumat, 16.30 - 18.30",
-    price: "Rp 250.000 / bulan",
+    ageRange: "16 - 17 tahun (Putra)",
+    focus: "Persiapan kompetisi liga (WJL League, MZT League) & mental #FightingSpirit",
+    schedule: "Selasa, Kamis & Minggu, 17.30 - 19.00",
+    price: "Hubungi Admin (DM Instagram)",
   },
 ];
 
@@ -89,15 +94,15 @@ export const coaches = [
   {
     name: "Agus Setiawan",
     role: "Head Coach / Direktur Teknik",
-    license: "Lisensi AFC C",
-    experience: "12 tahun melatih usia dini",
+    license: "Lisensi Kepelatihan Futsal C",
+    experience: "12 tahun melatih futsal usia dini",
     photo: "/images/coach-placeholder.jpg",
   },
   {
     name: "Budi Prasetyo",
-    role: "Pelatih Kelompok U-8 & U-10",
-    license: "Lisensi PSSI D",
-    experience: "6 tahun melatih usia dini",
+    role: "Pelatih Kelompok U-11 & U-13",
+    license: "Lisensi Kepelatihan Futsal D",
+    experience: "6 tahun melatih futsal usia dini",
     photo: "/images/coach-placeholder.jpg",
   },
   {
@@ -109,94 +114,99 @@ export const coaches = [
   },
   {
     name: "Dedi Kurniawan",
-    role: "Pelatih Kiper",
-    license: "Lisensi Goalkeeping Nasional",
-    experience: "8 tahun melatih kiper usia dini",
+    role: "Pelatih Kiper Futsal",
+    license: "Lisensi Goalkeeping Futsal Nasional",
+    experience: "8 tahun melatih kiper futsal usia dini",
     photo: "/images/coach-placeholder.jpg",
   },
 ];
 
 export const testimonials = [
   {
-    name: "Ibu Siti (Orang tua siswa U-10)",
+    name: "Ibu Siti (Orang tua siswa U-13)",
     quote:
-      "Anak saya jadi lebih percaya diri dan disiplin sejak ikut SSB Garuda Muda. Pelatihnya ramah dan sabar.",
+      "Anak saya jadi lebih percaya diri dan disiplin sejak ikut MF Academy. Pelatihnya ramah dan sabar, semangat #FightingSpirit-nya kerasa banget.",
   },
   {
-    name: "Bapak Hendra (Orang tua siswa U-12)",
+    name: "Bapak Hendra (Orang tua siswa U-15)",
     quote:
-      "Fasilitas lapangan bagus, jadwal jelas, dan ada laporan perkembangan tiap bulan. Sangat membantu.",
+      "Jadwal latihan jelas, anak rutin ikut liga (WJL/MZT), jadi kelihatan progresnya. Sangat membantu untuk anak yang serius di futsal.",
   },
   {
-    name: "Rizky (Alumni, kini bermain di klub lokal)",
+    name: "Rizky (Alumni, kini bermain di klub futsal lokal)",
     quote:
-      "Dasar teknik dan mental bertanding saya dibentuk di sini sejak kecil. Terima kasih SSB Garuda Muda!",
+      "Dasar teknik dan mental bertanding saya dibentuk sejak kecil di sini. Terima kasih MF Academy!",
   },
 ];
 
+// Berita — merujuk pola konten nyata dari Instagram @mf.futsal.academy
+// (match day WJL League U16, MZT League U11, dll). Tanggal & detail hasil
+// pertandingan belum dikonfirmasi — lengkapi dengan data asli dari admin.
 export const news = [
   {
-    title: "SSB Garuda Muda Juara 2 Turnamen Usia Dini Piala Walikota",
-    date: "2026-09-12",
+    title: "MF Academy Berjuang di WJL League U16 Lawan TOHO & Asterra",
+    date: "2026-10-30",
     excerpt:
-      "Tim U-12 berhasil meraih posisi runner-up dalam turnamen antar SSB tingkat kota.",
+      "Tim U-16 tampil dalam dua laga beruntun WJL League bertempat di Saka Futsal Camp. #FightingSpirit 🔥",
   },
   {
-    title: "Pembukaan Pendaftaran Gelombang Baru Tahun Ajaran 2026/2027",
-    date: "2026-08-01",
+    title: "Skuad Resmi MF Academy Tampil di Wins Junior League U16",
+    date: "2026-10-15",
     excerpt:
-      "Pendaftaran siswa baru untuk semua kelompok usia resmi dibuka mulai Agustus 2026.",
+      "20 pemain terbaik resmi diumumkan sebagai Official Squad List untuk kompetisi Wins Junior League U16. Ready For Fight, Ready For The Game.",
   },
   {
-    title: "Pelatihan Lisensi Kepelatihan untuk Staff SSB",
-    date: "2026-07-20",
+    title: "Aksi MF Academy di MZT League U11 Lawan SS Fa & Gaharu",
+    date: "2026-10-15",
     excerpt:
-      "Para pelatih SSB Garuda Muda mengikuti pelatihan lisensi untuk meningkatkan kualitas pengajaran.",
+      "Kelompok usia dini U-11 unjuk kemampuan di Ensport Arena dalam rangkaian pertandingan MZT League.",
   },
 ];
 
+// Catatan jujur: ini merekam partisipasi/kegiatan yang terlihat di akun
+// Instagram resmi, BUKAN klaim "juara" yang belum terkonfirmasi.
 export const achievements = [
-  "Juara 1 Piala Kemerdekaan Usia Dini 2023 (Kelompok U-12)",
-  "Juara 2 Turnamen Antar SSB Piala Walikota 2026 (Kelompok U-12)",
-  "3 alumni lolos seleksi akademi klub profesional (2021-2025)",
-  "Peserta tetap Liga Usia Dini Kota sejak 2017",
+  "Peserta aktif WJL League U16 2026",
+  "Peserta aktif MZT League U11 2026",
+  "Rutin tampil di Saka Futsal Camp & Ensport Arena",
+  "Official Squad List 20 pemain — Wins Junior League U16",
 ];
 
 export const stats = [
-  { value: 10, suffix: "+", label: "Tahun Berdiri" },
-  { value: 500, suffix: "+", label: "Alumni & Siswa Aktif" },
-  { value: 15, suffix: "", label: "Trofi & Penghargaan" },
-  { value: 12, suffix: "", label: "Pelatih Bersertifikat" },
+  { value: 100, suffix: "+", label: "Siswa Aktif" },
+  { value: 4, suffix: "", label: "Kelompok Usia" },
+  { value: 2, suffix: "", label: "Liga Diikuti" },
+  { value: 6, suffix: "+", label: "Pelatih & Staff" },
 ];
 
 export const features = [
   {
     icon: "ShieldCheck",
-    title: "Pelatih Bersertifikat",
-    desc: "Seluruh pelatih memiliki lisensi kepelatihan resmi (AFC/PSSI) dan pengalaman menangani usia dini.",
+    title: "Pelatih Berlisensi Futsal",
+    desc: "Pelatih berpengalaman menangani kategori usia muda dengan kurikulum futsal modern.",
   },
   {
     icon: "Target",
-    title: "Kurikulum Berjenjang",
-    desc: "Program latihan disusun bertahap sesuai kelompok usia, dari dasar hingga tingkat kompetitif.",
+    title: "Kurikulum Futsal 5 vs 5",
+    desc: "Fokus teknik ruang sempit, pengambilan keputusan cepat, dan transisi serang-bertahan khas futsal.",
   },
   {
     icon: "HeartHandshake",
-    title: "Fokus Pembentukan Karakter",
-    desc: "Bukan hanya teknik, kami menekankan disiplin, sportivitas, dan kerja sama tim pada setiap siswa.",
+    title: "#FightingSpirit",
+    desc: "Mental juang dan disiplin jadi fondasi tiap sesi latihan — bukan cuma soal skill individu.",
   },
   {
     icon: "Trophy",
-    title: "Jam Terbang Kompetisi",
-    desc: "Siswa rutin diikutkan turnamen & pertandingan persahabatan antar SSB untuk mengasah mental juara.",
+    title: "Jam Terbang Liga Aktif",
+    desc: "Pemain rutin tampil di liga futsal usia dini (WJL League, MZT League) untuk mengasah mental bertanding.",
   },
 ];
 
 export const galleryImages = [
-  { src: "/images/gallery-placeholder-1.jpg", alt: "Sesi latihan teknik dasar" },
-  { src: "/images/gallery-placeholder-2.jpg", alt: "Pertandingan persahabatan" },
-  { src: "/images/gallery-placeholder-3.jpg", alt: "Upacara penyerahan trofi" },
-  { src: "/images/gallery-placeholder-4.jpg", alt: "Latihan fisik dan kebugaran" },
-  { src: "/images/gallery-placeholder-5.jpg", alt: "Sesi latihan kiper" },
-  { src: "/images/gallery-placeholder-6.jpg", alt: "Foto bersama tim dan pelatih" },
+  { src: "/images/gallery-placeholder-1.jpg", alt: "Sesi latihan teknik dasar futsal dalam ruangan" },
+  { src: "/images/gallery-placeholder-2.jpg", alt: "Match day WJL League U16" },
+  { src: "/images/gallery-placeholder-3.jpg", alt: "Dokumentasi tim sebelum pertandingan" },
+  { src: "/images/gallery-placeholder-4.jpg", alt: "Latihan fisik dan kebugaran pemain" },
+  { src: "/images/gallery-placeholder-5.jpg", alt: "Sesi latihan kiper futsal" },
+  { src: "/images/gallery-placeholder-6.jpg", alt: "Foto tim MF Academy #FightingSpirit" },
 ];

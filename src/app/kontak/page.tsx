@@ -23,7 +23,7 @@ export default function KontakPage() {
 
   return (
     <div>
-      <PageHero image={heroImages.kontak} imageAlt="Lapangan SSB" title="Kontak Kami" size="sm" />
+      <PageHero image={heroImages.kontak} imageAlt="Lapangan futsal MF Academy" title="Kontak Kami" size="sm" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-14 sm:py-16 grid gap-10 grid-cols-1 md:grid-cols-2">
         <FadeIn>
@@ -63,7 +63,7 @@ export default function KontakPage() {
               height="100%"
               style={{ border: 0 }}
               loading="lazy"
-              title="Lokasi SSB"
+              title="Lokasi MF Academy"
             />
           </div>
         </FadeIn>

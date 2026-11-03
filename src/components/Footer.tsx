@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Camera, Mail, MapPin, Phone, PlayCircle, ShieldCheck } from "lucide-react";
+import { Camera, Mail, MapPin, Phone } from "lucide-react";
 import { navLinks, siteConfig } from "@/data/site";
 import { CurrentYear } from "@/components/ui/CurrentYear";
 
@@ -10,8 +10,8 @@ export default function Footer() {
       <div className="relative max-w-6xl mx-auto px-4 py-14 grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-2.5 font-display font-extrabold text-lg text-white">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-gold text-brand-green-dark">
-              <ShieldCheck size={18} strokeWidth={2.4} />
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white text-brand-green-dark text-sm font-extrabold tracking-tight">
+              MF
             </span>
             {siteConfig.name}
           </div>
@@ -25,15 +25,6 @@ export default function Footer() {
               className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-green-dark transition-colors"
             >
               <Camera size={16} />
-            </a>
-            <a
-              href={siteConfig.youtube}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="YouTube"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-green-dark transition-colors"
-            >
-              <PlayCircle size={16} />
             </a>
           </div>
         </div>

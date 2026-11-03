@@ -12,7 +12,7 @@ export default function GaleriPage() {
     <div>
       <PageHero
         image={heroImages.galeri}
-        imageAlt="Momen kebersamaan tim SSB"
+        imageAlt="Momen kebersamaan tim MF Academy"
         title="Galeri Kegiatan"
         description={`Dokumentasi latihan, pertandingan, dan momen kebersamaan ${siteConfig.name}.`}
       />

@@ -13,7 +13,7 @@ export default function PelatihPage() {
     <div>
       <PageHero
         image={heroImages.pelatih}
-        imageAlt="Pelatih mendampingi anak-anak bermain sepak bola"
+        imageAlt="Pelatih mendampingi anak-anak bermain futsal"
         title="Pelatih & Staff"
         description={`Tim pelatih ${siteConfig.name} terdiri dari pelatih berlisensi dengan pengalaman menangani pemain usia dini.`}
       />
