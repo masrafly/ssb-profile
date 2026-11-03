@@ -18,14 +18,29 @@ export const siteConfig = {
 
 export const navLinks = [
   { href: "/", label: "Beranda" },
-  { href: "/tentang", label: "Tentang Kami" },
-  { href: "/program", label: "Program Latihan" },
-  { href: "/pelatih", label: "Pelatih & Staff" },
-  { href: "/jadwal", label: "Jadwal & Lokasi" },
+  { href: "/tentang", label: "Tentang" },
+  { href: "/program", label: "Program" },
+  { href: "/pelatih", label: "Pelatih" },
+  { href: "/jadwal", label: "Jadwal" },
   { href: "/galeri", label: "Galeri" },
-  { href: "/prestasi", label: "Prestasi & Berita" },
+  { href: "/prestasi", label: "Prestasi" },
   { href: "/kontak", label: "Kontak" },
 ];
+
+// Foto aksi sepak bola (Unsplash, lisensi bebas pakai) untuk background hero
+// tiap halaman. Ganti dengan foto asli kegiatan SSB bila sudah tersedia.
+export const heroImages = {
+  home: "https://images.unsplash.com/photo-1604651683969-48adb1d8a570",
+  tentang: "https://images.unsplash.com/photo-1522778119026-d647f0596c20",
+  program: "https://images.unsplash.com/photo-1604935281463-a7ad4f808f32",
+  pelatih: "https://images.unsplash.com/photo-1526232761682-d26e03ac148e",
+  jadwal: "https://images.unsplash.com/photo-1522778119026-d647f0596c20",
+  galeri: "https://images.unsplash.com/photo-1604651683969-48adb1d8a570",
+  prestasi: "https://images.unsplash.com/photo-1604935281463-a7ad4f808f32",
+  pendaftaran: "https://images.unsplash.com/photo-1526232761682-d26e03ac148e",
+  kontak: "https://images.unsplash.com/photo-1522778119026-d647f0596c20",
+};
+
 
 export const programs = [
   {
