@@ -37,11 +37,11 @@ export default function Home() {
             tinggi konten berubah (teks wrap lebih banyak baris di layar sempit). */}
         <div className="relative z-10 flex-1 flex items-center">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 text-center w-full">
-            <FadeIn>
+            {/* <FadeIn>
               <Badge variant="outline" className="mb-5 sm:mb-6">
                 <Sparkles size={14} /> {siteConfig.category} • {siteConfig.ageRangeLabel} • {siteConfig.hashtag}
               </Badge>
-            </FadeIn>
+            </FadeIn> */}
             <FadeIn delay={0.08}>
               <h1 className="font-display text-balance text-3xl font-extrabold leading-[1.15] sm:text-5xl md:text-6xl">
                 {siteConfig.tagline}
